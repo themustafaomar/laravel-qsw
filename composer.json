@@ -1,6 +1,6 @@
 {
     "name": "mustafaomar/laravel-qsw",
-    "description": "A simple package for uploading media and storing media urls in database",
+    "description": "Cleanly apply filters on a query builder depending on query string parameters.",
     "license": "MIT",
     "authors": [
         {

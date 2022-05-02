@@ -1,4 +1,4 @@
-## Introduction
+## Laravel query-string watcher
 
 Cleanly apply filters on a query builder depending on query string parameters.
 
