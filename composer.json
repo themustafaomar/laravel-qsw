@@ -1,0 +1,27 @@
+{
+    "name": "mustafaomar/laravel-qsw",
+    "description": "A simple package for uploading media and storing media urls in database",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mustafa Omar",
+            "email": "themustafaomar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "laravel/framework": "~7.0 || ~8.0 || ~9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "QueryWatcher\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "QueryWatcher\\QueryWatcherServiceProvider"
+            ]
+        }
+    }
+}
