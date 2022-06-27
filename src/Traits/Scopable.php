@@ -12,7 +12,7 @@ trait Scopable
      * 
      * @param \Illuminate\Database\Eloquent\Builder  $builder
      * @param array  $keys
-     * @return \FileUploader\FileUploaderManager
+     * @return Illuminate\Database\Eloquent\Builder
      */
     public function scopeWatch(Builder $builder, $scopes)
     {
