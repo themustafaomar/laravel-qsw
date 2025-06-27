@@ -27,7 +27,7 @@ You can use `Scopable` in your model and we're done, you now have access to the 
 Article.php
 
 ```php
-use QueryWatcher\Traits\Scopable;
+use Queryable\Traits\Scopable;
 
 class Article extends Model
 {
@@ -48,7 +48,7 @@ This command will create a scope class similar to this:
 ```php
 namespace App\Scopes;
  
-use QueryWatcher\Contracts\Scope;
+use Queryable\Contracts\Scope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
  
@@ -77,12 +77,12 @@ ArticleController.php
 ```php
 public function index(Request $request)
 {
-    $article = Article::watch($this->queryWatchers())->first();
+    $article = Article::watch($this->Queryables())->first();
 
     return response()->json($article);
 }
 
-protected function queryWatchers()
+protected function Queryables()
 {
     return [
         // 'comments' => ArticleCommentScope::class,
@@ -151,7 +151,7 @@ in the following example we'll create a scope called `scopes`.
 Article.php
 
 ```php
-use QueryWatcher\Facades\QueryWatcher;
+use Queryable\Facades\Queryable;
 use Illuminate\Database\Eloquent\Builder;
 
 class Article extends Model
@@ -167,7 +167,7 @@ class Article extends Model
      */
     public function scopeScopes(Builder $builder, $scopes)
     {
-        $instance = QueryWatcher::getInstance();
+        $instance = Queryable::getInstance();
 
         // Or by resolving query watcher from the container
 

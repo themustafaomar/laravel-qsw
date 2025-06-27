@@ -1,22 +1,22 @@
 <?php
 
-namespace QueryWatcher\Traits;
+namespace Queryable\Traits;
 
-use QueryWatcher\Facades\QueryWatcher;
 use Illuminate\Database\Eloquent\Builder;
+use Queryable\Facades\Queryable;
 
 trait Scopable
 {
     /**
-     * Register the query string params to watch
-     * 
-     * @param \Illuminate\Database\Eloquent\Builder  $builder
-     * @param array  $keys
-     * @return Illuminate\Database\Eloquent\Builder
+     * Register the query string params to watch.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $builder
+     * @param  array  $keys
+     * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWatch(Builder $builder, $scopes)
     {
-        $instance = QueryWatcher::getInstance();
+        $instance = Queryable::getInstance();
 
         $instance->watch($builder, $scopes);
 

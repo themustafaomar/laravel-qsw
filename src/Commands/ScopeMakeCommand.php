@@ -1,11 +1,10 @@
 <?php
 
-namespace QueryWatcher\Commands;
+namespace Queryable\Commands;
 
-use Illuminate\Support\Str;
-use InvalidArgumentException;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class ScopeMakeCommand extends Command
 {
@@ -33,12 +32,13 @@ class ScopeMakeCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return void
+     * @return void|bool
      *
      * @throws \InvalidArgumentException
      */
     public function handle()
     {
+        dd('@deprecated');
         $name = $this->qualifyClass($this->getNameInput());
         $path = $this->getPath($name);
 
@@ -146,6 +146,7 @@ class ScopeMakeCommand extends Command
     {
         return trim(implode('\\', array_slice(explode('\\', $name), 0, -1)), '\\');
     }
+
     /**
      * Compiles the "HomeController" stub.
      *

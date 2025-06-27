@@ -1,5 +1,5 @@
 {
-    "name": "mustafaomar/laravel-qsw",
+    "name": "mustafaomar/laravel-queryable",
     "description": "Cleanly apply filters on a query builder depending on query string parameters.",
     "license": "MIT",
     "authors": [
@@ -14,13 +14,13 @@
     },
     "autoload": {
         "psr-4": {
-            "QueryWatcher\\": "src/"
+            "Queryable\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "QueryWatcher\\QueryWatcherServiceProvider"
+                "Queryable\\QueryableServiceProvider"
             ]
         }
     }

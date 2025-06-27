@@ -1,10 +1,10 @@
 <?php
 
-namespace QueryWatcher\Facades;
+namespace Queryable\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class QueryWatcher extends Facade
+class Queryable extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class QueryWatcher extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel.qsw';
+        return 'laravel.queryable';
     }
 }

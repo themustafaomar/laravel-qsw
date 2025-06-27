@@ -2,7 +2,7 @@
  
 namespace {{namespace}};
  
-use QueryWatcher\Contracts\Scope;
+use Queryable\Contracts\Scope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
